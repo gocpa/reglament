@@ -6,9 +6,9 @@ const config = {
   title: 'GoCPA.Reglament',
   tagline: 'Сборник регламентов и новостей отдела заказной разработки GoCPA',
 
-  url: 'http://gocpa.github.io/',
+  url: 'https://reglament.gocpa.space/',
  
-  baseUrl: '/reglament/',
+  baseUrl: '/',
 
   organizationName: 'GoCPA',
   projectName: 'custom-dev-reglaments',
