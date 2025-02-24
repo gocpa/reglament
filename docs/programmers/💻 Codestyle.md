@@ -318,7 +318,7 @@ use Illuminate\Support\Facades\Log;
 
 class CheckCaptchaUseCase
 {
-    public function handler(?string $token): bool
+    public function handle(?string $token): bool
     {
         $secretKey = config('captcha.secret_id');
         $captchaId = config('captcha.id');
