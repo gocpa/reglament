@@ -2,3 +2,8 @@ info:
   label: Информационный пост
   permalink: /info
   description: Информационные посты
+
+new:
+  label: Новый документ
+  permalink: /newdoc
+  description: Информация о новых документах
