@@ -24,11 +24,8 @@ const config = {
   presets: [
     [
       'classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      ({
-        docs: {
-          sidebarPath: './sidebars.js',
-        },
+      {
+        docs: false, // Отключаем стандартный docs
         blog: {
           showReadingTime: true,
           feedOptions: {
@@ -42,7 +39,36 @@ const config = {
         theme: {
           customCss: './src/css/custom.css',
         },
-      }),
+      },
+    ],
+  ],
+  plugins: [
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'regulations',
+        path: 'docs/regulations',
+        routeBasePath: 'regulations',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'instructions',
+        path: 'docs/instructions',
+        routeBasePath: 'instructions',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
+    ],
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'documentation',
+        path: 'docs/documentation',
+        routeBasePath: 'documentation',
+        sidebarPath: require.resolve('./sidebars.js'),
+      },
     ],
   ],
 
@@ -53,12 +79,9 @@ const config = {
       navbar: {
         title: 'GoCPA.Reglament',
         items: [
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'left',
-            label: 'Регламенты',
-          },
+          { to: '/regulations', label: 'Регламенты', position: 'left' },
+          { to: '/instructions', label: 'Инструкции', position: 'left' },
+          { to: '/documentation', label: 'Документация', position: 'left' },
           {to: '/blog', label: 'Новости', position: 'left'},
         ],
       },
